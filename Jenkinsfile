@@ -7,7 +7,7 @@ pipeline {
     stages { 
         stage('Build') { 
             steps { 
-               echo 'This is a minimal pipeline.' 
+               echo 'This is a Build Step.' 
                    sh 'mvn clean install'
             }
         }
