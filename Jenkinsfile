@@ -1,5 +1,7 @@
 pipeline { 
+
     agent any 
+
     tools {
         maven 'MyMaven'
         jdk 'jdk8'
@@ -12,6 +14,7 @@ pipeline {
             }
         }
         
+
         stage('Deploy') { 
             steps { 
                echo 'This is a Deploy Step.' 
