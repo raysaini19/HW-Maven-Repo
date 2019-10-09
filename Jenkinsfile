@@ -1,5 +1,7 @@
 pipeline { 
-    agent any  
+
+    agent any 
+
     tools {
         maven 'MyMaven'
         jdk 'jdk8'
@@ -7,10 +9,12 @@ pipeline {
     stages { 
         stage('Build') { 
             steps { 
-               echo 'This is a minimal pipeline.' 
-                sh 'mvn clean install'
+               echo 'This is a Build Step.' 
+                   sh 'mvn clean install'
             }
         }
+        
+
         stage('Deploy') { 
             steps { 
                echo 'This is a Deploy Step.' 
