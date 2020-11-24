@@ -1,25 +1,17 @@
-pipeline { 
-
-    agent any 
-
-    tools {
-        maven 'MyMaven'
-        jdk 'jdk8'
-    }
-    stages { 
-        stage('Build') { 
-            steps { 
-               echo 'This is a Build Step.' 
-                   sh 'mvn clean install'
+// Declarative //
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
             }
         }
-        
-
-        stage('Deploy') { 
-            steps { 
-               echo 'This is a Deploy Step.' 
-                   
-            }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
         }
     }
 }
+// Script //
