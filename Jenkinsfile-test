@@ -8,7 +8,7 @@ pipeline {
 
             steps {
                 sh '''
-                "echo 'Hello World, my nuget token is $NUGET_APIKEY'"
+                echo 'Hello World, my nuget token is $NUGET_APIKEY'
                 '''
             }
         }
@@ -16,7 +16,7 @@ pipeline {
 
             steps {
                 sh '''
-                "echo '$NUGET_APIKEY'"
+                echo '$NUGET_APIKEY'
                 '''
             }
         }
