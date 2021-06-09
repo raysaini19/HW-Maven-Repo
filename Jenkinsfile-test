@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+                environment {
+                NUGET_APIKEY = credentials('NUGET')
+    }
+    stages {
+        stage('Example') {
+
+            steps {
+                sh '''
+                "echo 'Hello World, my nuget token is $NUGET_APIKEY'"
+                '''
+            }
+        }
+        stage('Example-2') {
+
+            steps {
+                sh '''
+                "echo '$NUGET_APIKEY'"
+                '''
+            }
+        }
+    }
+}
